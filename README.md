@@ -6,4 +6,4 @@
 	- Les fonctions normales: peuvent etre appeler avant leurs declarations, exemple: `function MaFonction(){}`
 	- Les fonction anonymes: Ne peuvent pas etre appeler avant leurs declarations, exemple:`const MaFonction = function (){}`
 	- Les fonctions flechees: Ne peuvent pas etre appeler avant leurs declarations, exemple: `MaFonction => {}`, permet d'utiliser une syntaxe plus concise que les expressions de fonctions classiques.
-	- Les fonctions Construction: Appeler avec le mot cles *new* et permettent d'utiliser le mot cle *this* dans leurs declarations.
+	- Les fonctions Construction: Appeler avec le mot cles *new* et permettent d'utiliser le mot clé *this* dans leurs declarations.
