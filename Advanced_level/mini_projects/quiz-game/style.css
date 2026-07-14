@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ! Conteneur Principal */
+section.app-container {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+section.app-container h1.app-title {
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+/* ? Zone des Questions */
+section.app-container .questions-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.questions-container .question.element {
+  width: 100%;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: .90rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+  line-height: 1.5;
+  margin-bottom: 25px;
+  border: none;
+}
+
+/* ? Zone des Réponses */
+.answers {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 480px) {
+  .answers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.answers .element {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #334155;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  text-align: center;
+  gap: 5px;
+  user-select: none;
+}
+
+.answers .element:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+  color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #6366f11a;
+}
+
+.answers .element.selected {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #ffffff;
+}
+
+/* ? Zone des Boutons Navigation */
+.buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+  gap: 15px;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+#back {
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  color: #64748b;
+}
+
+#back:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+#next {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+#next:hover {
+  background-color: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+/* ? Zone des Résultats */
+.result-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.result-container .msg {
+  font-weight: 700;
+  font-size: 24px;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.result-container .result {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.result-container .result h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.result .correct {
+  color: #10b981;
+  background: #ecfdf5;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.result .incorrect {
+  color: #ef4444;
+  background: #fef2f2;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+#try_again {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  box-shadow: 0 4px 15px #7c3aed33;
+}
+
+#try_again:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #7c3aed4d;
+}
